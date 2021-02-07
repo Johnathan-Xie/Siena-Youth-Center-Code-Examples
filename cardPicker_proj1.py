@@ -13,10 +13,10 @@ def cards_init():
     for val in values:
         for suit in suits:
             cards.append(val + ' of ' + suit)
-
     random.shuffle(cards)
     return cards
 
-if __name__ == 'main':
+if __name__ == '__main__':
     cards = cards_init()
-    print(pickCards(1, cards))
+    for card in pick_cards(10, cards):
+        print(card)
