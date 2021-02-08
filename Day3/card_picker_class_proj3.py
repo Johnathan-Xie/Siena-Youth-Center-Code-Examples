@@ -54,3 +54,5 @@ class Deck:
 if __name__ == '__main__':
     deck = Deck()
     deck.peek(10)
+    deck.pick(10)
+    deck.pick(10)

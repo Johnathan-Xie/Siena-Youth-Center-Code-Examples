@@ -1,5 +1,5 @@
 #initial
-def gen_table_basic(row_values, column_values, max_space = None):
+def gen_table_basic(row_values, column_values):
     for i in row_values:
         for j in column_values:
             print(i * j, end=' ')

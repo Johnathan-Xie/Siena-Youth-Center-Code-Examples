@@ -1,13 +1,13 @@
 import random
 class StudentCourse:
-    def __init__(self, course_name, scores=[], weights=[], assignment_names=[]):
+    def __init__(self, student_name, course_name, scores=[], weights=[], assignment_names=[]):
+        self.student_name = student_name
         self.course_name = course_name
-        self.scores = scores
-        self.weights = weights
-        self.assignment_names = assignment_names
+        self.scores = []
+        self.weights = []
+        self.assignment_names = []
     
     def add_assignment(self, score, weight=1.0, name=None):
-        print("add_assignment call")
         self.scores.append(score)
         self.weights.append(weight)
         self.assignment_names.append(name)
@@ -35,7 +35,7 @@ class Gradebook:
         self.all_courses = set()
     
     def add_course(self, student_name, course_name):
-        self.data[student_name][course_name] = StudentCourse(course_name)
+        self.data[student_name][course_name] = StudentCourse(student_name, course_name)
         self.all_courses.add(course_name)
     
     def add_score(self, student_name, course_name, score, weight=1.0, name=None):
@@ -61,5 +61,6 @@ if __name__ == '__main__':
     for name in grades.get_student_names():
         grades.add_course(name, 'Math')
         grades.add_score(name, 'Math', 1.0 - random.random() * 0.1)
+        grades.add_score(name, 'Math', 2.0 - random.random() * 0.1)
     
     grades.print_gradebook()
