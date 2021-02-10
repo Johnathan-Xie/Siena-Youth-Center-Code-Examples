@@ -19,7 +19,7 @@ class Student(Person):
     def welcome(self):
         return super().greeting() + '. Welcome to ' + self.school_name + '.'
 
-#write another class which inherits from person
+#write another class which inherits from person and utilizes the super keyword
 
 if __name__ == '__main__':
     me = Student('Johnathan', 'Xie', 16, 'Sacred Heart Schools Atherton')
