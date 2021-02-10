@@ -25,17 +25,13 @@ def play(player_choice, computer_choice):
 
 #for students to complete
 def play_win(player_choice):
-    if player_choice == 'scissors':
-        return 'rock'
-    if player_choice == 'paper':
-        return 'scissors'
-    if player_choice == 'rock':
-        return 'paper'
-    else:
-        raise ValueError
-    #winning_values = {'scissors': 'rock', 'paper': 'scissors', 'rock': 'paper'}
-    #return winning_values[player_choice]
-
+    '''
+    given an input output the winning choice for the other player(computer in this case)
+    rock -> paper
+    paper -> scissors
+    scissors -> rock
+    '''
+    pass
 if __name__ == '__main__':
     inp = input()
     while inp != "":
